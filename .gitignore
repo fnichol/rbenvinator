@@ -1,0 +1,5 @@
+Cheffile.lock
+.vagrant
+config.yml
+cookbooks/
+tmp/
