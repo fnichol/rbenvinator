@@ -3,6 +3,23 @@ require 'yaml'
 
 DEFAULT_RUBIES = %w{1.9.3-p125}.freeze
 
+module Rake
+  module FileUtilsExt
+    alias :real_rake_output_message :rake_output_message
+    def rake_output_message(message)
+      real_rake_output_message(filter_secrets(message))
+    end
+
+    private
+
+    SECRETS = %w{AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY}
+
+    def filter_secrets(message)
+      message.gsub(%r{(#{SECRETS.join('|')})=('?[^\s']*'?)}, '\1=<protected>')
+    end
+  end
+end
+
 def vagrant(box, action = "up")
 
   rubies = @config['rbenv_rubies'] || DEFAULT_RUBIES
