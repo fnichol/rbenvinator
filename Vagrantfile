@@ -15,7 +15,8 @@ Vagrant::Config.run do |config|
   config.vm.provision :shell do |shell|
     shell.inline = <<-PROVISION.gsub(/^ {6}/, '')
       if which apt-get >/dev/null ; then
-        apt-get update -y
+        apt-get -y update
+        apt-get -y upgrade
       fi
     PROVISION
   end
