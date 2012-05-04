@@ -45,8 +45,13 @@ end
   end
 end
 
+desc "Cleans up temporary files/directories"
+task :cleanup do
+  rm_rf %w{Cheffile.lock cookbooks tmp}
+end
+
 desc "Builds and uploads Ruby versions for all boxes"
-task :build_all => [:init] do
+task :build_all => [:cleanup, :init] do
   Array(@config['vagrant_boxes']).each do |box|
     vagrant box, "up"
     vagrant box, "destroy -f"
