@@ -5,6 +5,19 @@ s3_bucket: /my/bucket
 vagrant_boxes:
   - lucid32
   - lucid64
+  - maverick32
+  - maverick64
+  - natty32
+  - natty64
+  - oneiric32
+  - oneiric64
 rbenv_rubies:
+  - 1.8.7-p357
   - 1.8.7-p358
   - 1.9.3-p125
+  - 1.9.3-p194
+  - jruby-1.6.7
+  - jruby-1.7.0-dev
+  - ree-1.8.7-2012.02
+  - lucid32
+  - lucid64
