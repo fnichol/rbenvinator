@@ -15,6 +15,11 @@ Vagrant::Config.run do |config|
   config.vm.provision :shell do |shell|
     shell.inline = <<-PROVISION.gsub(/^ {6}/, '')
       if which apt-get >/dev/null ; then
+        preseed=/var/cacle/local/preseeding/grub.seed
+        mkdir -p $(dirname $preseed)
+        echo 'grub-pc	grub-pc/install_devices	multiselect	/dev/sda1' > $preseed
+        debconf-set-selections $preseed
+
         apt-get -y update
         apt-get -y upgrade
       fi
