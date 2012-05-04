@@ -6,4 +6,4 @@ site 'http://community.opscode.com/api/v1'
 cookbook 'java'
 cookbook 'ruby_build'
 cookbook 'rbenv',             :git => 'https://github.com/fnichol/chef-rbenv',
-                              :ref => 'v0.6.4'
+                              :ref => 'master'
