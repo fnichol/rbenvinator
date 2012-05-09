@@ -3,7 +3,10 @@
 
 site 'http://community.opscode.com/api/v1'
 
-cookbook 'java'
+                              # using branch pending pull request
+                              # https://github.com/opscode-cookbooks/java/pull/4
+cookbook 'java',              :git => 'https://github.com/josephholsten/opscode-cookbooks-java.git',
+                              :ref => 'precise-support'
 cookbook 'ruby_build'
 cookbook 'rbenv',             :git => 'https://github.com/fnichol/chef-rbenv',
                               :ref => 'v0.6.8'
