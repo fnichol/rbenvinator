@@ -1,6 +1,6 @@
 ---
-aws_access_key_id: keyid
-aws_secret_access_key: accesskey
+aws_access_key_id: my_access_key_id
+aws_secret_access_key: my_secret_access_key
 s3_bucket: /my/bucket
 vagrant_boxes:
   - precise32
