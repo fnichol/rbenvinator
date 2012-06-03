@@ -21,8 +21,8 @@ with this project.
 
 ### <a name="prerequisites-librarian-gem"></a> Librarian Gem
 
-The [Librarian](http://rubygems.org/gems/librarian) also needs to be installed
-by running:
+The [Librarian](http://rubygems.org/gems/librarian) gem also needs to be
+installed by running:
 
 ```bash
 $ gem install librarian
