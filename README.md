@@ -52,8 +52,9 @@ Next initialize your configuration with:
 $ rake init
 ```
 
-Now edit the `config.yml` and fill in your AWS/S3 credentials and enumerate
-the Vagrant base box/Ruby version combinations you want to build against.
+Now edit the `config.yml` file and fill in your AWS/S3 credentials and
+enumerate the Vagrant base box/Ruby version combinations you want to build
+against.
 
 ## <a name="build"></a> Build Them All!
 
