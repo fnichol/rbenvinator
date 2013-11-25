@@ -1,7 +1,7 @@
 #!/usr/bin/env rake
 require 'yaml'
 
-DEFAULT_RUBIES = %w{1.9.3-p125}.freeze
+DEFAULT_RUBIES = %w{1.9.3-p484}.freeze
 
 module Rake
   module FileUtilsExt
