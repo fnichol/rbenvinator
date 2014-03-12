@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-rbenv_rubies = ENV['RBENV_RUBIES'] ? ENV['RBENV_RUBIES'].split(' ') : %w{1.9.3-p194}
+rbenv_rubies = ENV['RBENV_RUBIES'] ? ENV['RBENV_RUBIES'].split(' ') : %w{2.1.1}
 
 s3_bash_url = "https://github.com/cosmin/s3-bash/tarball/master"
 
